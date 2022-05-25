@@ -6,6 +6,8 @@
   "scripts": {
     "lint-create": "eslint --init",
     "lint": "eslint src",
+    "format": "prettier --write '**/*.ts'",
+    "format-check": "prettier --check '**/*.ts'",
     "test": "jest"
   },
   "repository": {
@@ -21,6 +23,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",
-    "eslint": "^8.16.0"
+    "eslint": "^8.16.0",
+    "prettier": "2.6.2"
   }
 }
