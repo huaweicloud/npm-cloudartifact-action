@@ -4,6 +4,8 @@
   "description": "Action for uploading or downloading artifact from HuaweiCloud npm CloudArtifact\"",
   "main": "lib/main.js",
   "scripts": {
+    "lint-create": "eslint --init",
+    "lint": "eslint src",
     "test": "jest"
   },
   "repository": {
@@ -15,5 +17,10 @@
     "cloudartifact"
   ],
   "author": "Chenyt26",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0"
+  }
 }
