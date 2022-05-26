@@ -6,8 +6,7 @@ import * as context from './context';
  * @returns
  */
 export function checkInputs(inputs: context.Inputs): boolean {
-  
-  return true;
+    return true;
 }
 
 /**
@@ -15,14 +14,14 @@ export function checkInputs(inputs: context.Inputs): boolean {
  * @param string[]
  * @returns boolean
  */
- export function checkRegistryList(registryList: string[]): boolean {
-    for(var i = 0; i<registryList.length; i++) { 
-      console.log(registryList[i])
+export function checkRegistryList(registryList: string[]): boolean {
+    for (let i = 0; i < registryList.length; i++) {
+        console.log(registryList[i]);
         const registryReg = new RegExp(/^registry=.+/);
         const scopeRegistryReg = new RegExp(/^@.+:registry=.+/);
         if (!registryReg.test(registryList[i]) && !scopeRegistryReg.test(registryList[i])) {
             return false;
         }
-    } 
+    }
     return true;
- }
+}
