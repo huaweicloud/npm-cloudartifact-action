@@ -25,12 +25,15 @@
   "author": "Chenyt26",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^27.5.1",
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",
     "@vercel/ncc": "^0.33.4",
     "eslint": "^8.16.0",
     "jest": "^28.1.0",
     "prettier": "2.6.2",
+    "ts-jest": "^28.0.3",
+    "ts-node": "^10.8.0",
     "typescript": "^4.7.2"
   },
   "dependencies": {

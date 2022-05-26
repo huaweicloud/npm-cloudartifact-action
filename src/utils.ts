@@ -17,9 +17,10 @@ export function checkInputs(inputs: context.Inputs): boolean {
  */
  export function checkRegistryList(registryList: string[]): boolean {
     for(var i = 0; i<registryList.length; i++) { 
+      console.log(registryList[i])
         const registryReg = new RegExp(/^registry=.+/);
         const scopeRegistryReg = new RegExp(/^@.+:registry=.+/);
-        if (!registryReg.test(registryList[1]) && !scopeRegistryReg.test(registryList[1])) {
+        if (!registryReg.test(registryList[i]) && !scopeRegistryReg.test(registryList[i])) {
             return false;
         }
     } 
