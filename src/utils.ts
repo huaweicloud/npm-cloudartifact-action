@@ -6,7 +6,7 @@ import * as context from './context';
  * @returns
  */
 export function checkInputs(inputs: context.Inputs): boolean {
-    return true;
+    return checkRegistryList(inputs.registryList) && checkAuthList(inputs.authList);
 }
 
 /**
@@ -16,7 +16,6 @@ export function checkInputs(inputs: context.Inputs): boolean {
  */
 export function checkRegistryList(registryList: string[]): boolean {
     for (let i = 0; i < registryList.length; i++) {
-        console.log(registryList[i]);
         const registryReg = new RegExp(/^registry=.+/);
         const scopeRegistryReg = new RegExp(/^@.+:registry=.+/);
         if (!registryReg.test(registryList[i]) && !scopeRegistryReg.test(registryList[i])) {
@@ -33,15 +32,15 @@ export function checkRegistryList(registryList: string[]): boolean {
  */
  export function checkAuthList(authList: string[]): boolean {
   for (let i = 0; i < authList.length; i++) {
-      console.log(authList[i]);
       const authReg = new RegExp(/^_auth=.+/);
       const scopeAuthReg = new RegExp(/^\/\/.+:_auth=.+/);
       if (!authReg.test(authList[i]) && !scopeAuthReg.test(authList[i])) {
           return false;
       }
       const splitArray = authList[i].split('_auth='); 
-      const authBase64 = splitArray[1]; 
-      console.log(authBase64);
+      if (!isBase64(splitArray[1])) {
+        return false;
+      }
   }
   return true;
 }
