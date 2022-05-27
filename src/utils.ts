@@ -30,32 +30,34 @@ export function checkRegistryList(registryList: string[]): boolean {
  * @param string[]
  * @returns boolean
  */
- export function checkAuthList(authList: string[]): boolean {
-  for (let i = 0; i < authList.length; i++) {
-      const authReg = new RegExp(/^_auth=.+/);
-      const scopeAuthReg = new RegExp(/^\/\/.+:_auth=.+/);
-      if (!authReg.test(authList[i]) && !scopeAuthReg.test(authList[i])) {
-          return false;
-      }
-      const splitArray = authList[i].split('_auth='); 
-      if (!isBase64(splitArray[1])) {
-        return false;
-      }
-  }
-  return true;
+export function checkAuthList(authList: string[]): boolean {
+    for (let i = 0; i < authList.length; i++) {
+        const authReg = new RegExp(/^_auth=.+/);
+        const scopeAuthReg = new RegExp(/^\/\/.+:_auth=.+/);
+        if (!authReg.test(authList[i]) && !scopeAuthReg.test(authList[i])) {
+            return false;
+        }
+        const splitArray = authList[i].split('_auth=');
+        if (!isBase64(splitArray[1])) {
+            return false;
+        }
+    }
+    return true;
 }
 
 /**
  * 判断字符是否是base64编码
- * @param base64String 
+ * @param base64String
  * @returns boolean
  */
 export function isBase64(base64String: string) {
-  if (base64String ==='' || base64String.trim() ===''){ return false; }
-  try {
-      const preString =  Buffer.from(base64String, 'base64').toString();
-      return Buffer.from(preString).toString('base64') == base64String;
-  } catch (err) {
-      return false;
-  }
+    if (base64String === '' || base64String.trim() === '') {
+        return false;
+    }
+    try {
+        const preString = Buffer.from(base64String, 'base64').toString();
+        return Buffer.from(preString).toString('base64') == base64String;
+    } catch (err) {
+        return false;
+    }
 }

@@ -6,11 +6,10 @@ import * as context from './context';
 
 /**
  * 更加用户输入生成npmrc配置
- * @param inputs 
+ * @param inputs
  */
 export function generateNpmConfig(inputs: context.Inputs) {
-
-    let npmrcContent ='';
+    let npmrcContent = '';
     for (const entry of inputs.registryList) {
         npmrcContent = npmrcContent + entry + '\n';
     }
@@ -30,16 +29,16 @@ export function generateNpmConfig(inputs: context.Inputs) {
 
 /**
  * 返回用户npmrc配置路径
- * @returns 
+ * @returns
  */
 export function getNpmrcPath() {
     return path.join(os.homedir(), context.DEFAULT_NPMRC_FILE_NAME);
-  }
+}
 
 /**
  * npm配置写入~/.npmrc
- * @param npmrcPath 
- * @param npmrcContent 
+ * @param npmrcPath
+ * @param npmrcContent
  */
 export function writeNpmConfig(npmrcPath: string, npmrcContent: string) {
     fs.writeFileSync(npmrcPath, npmrcContent);

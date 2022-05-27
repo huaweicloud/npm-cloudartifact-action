@@ -10,13 +10,12 @@ export async function run() {
 
     // 检查参数是否合法
     if (!utils.checkInputs(inputs)) {
-      core.setFailed('parameter is not correct.');
-      return;
+        core.setFailed('parameter is not correct.');
+        return;
     }
 
     // 生成.npmrc配置内容
     config.generateNpmConfig(inputs);
-
 }
 
 run().catch(core.setFailed);

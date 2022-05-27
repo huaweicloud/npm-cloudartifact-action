@@ -1,11 +1,11 @@
 import * as utils from '../src/utils';
 
-  describe('test checkInputs', () => {
+describe('test checkInputs', () => {
     const testCase = [
-        {input: {registryList:[], authList:[]}, result: true},
-        {input: {registryList:[], authList:['test']}, result: false},
-        {input: {registryList:['test'], authList:[]}, result: false},
-        {input: {registryList:['test'], authList:['test']}, result: false},
+        {input: {registryList: [], authList: []}, result: true},
+        {input: {registryList: [], authList: ['test']}, result: false},
+        {input: {registryList: ['test'], authList: []}, result: false},
+        {input: {registryList: ['test'], authList: ['test']}, result: false}
     ];
     testCase.forEach(item => {
         const {input, result} = item;
@@ -58,7 +58,7 @@ describe('test whether the string is base64', () => {
         {base64String: 'aXNCYXNlNjQ=', result: true},
         {base64String: '', result: false},
         {base64String: ' ', result: false},
-        {base64String: 'hello', result: false},
+        {base64String: 'hello', result: false}
     ];
     testCase.forEach(item => {
         const {base64String, result} = item;
