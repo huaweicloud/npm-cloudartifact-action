@@ -10,7 +10,7 @@ export function checkInputs(inputs: context.Inputs): boolean {
 }
 
 /**
- * 检查registryList镜像列表参数是否合法
+ * 检查registryList参数是否合法
  * @param string[]
  * @returns boolean
  */
@@ -26,7 +26,7 @@ export function checkRegistryList(registryList: string[]): boolean {
 }
 
 /**
- * 检查authList镜像列表参数是否合法
+ * 检查authList参数是否合法
  * @param string[]
  * @returns boolean
  */

@@ -11,3 +11,6 @@ export function getInputs(): Inputs {
         authList: core.getMultilineInput('auth_list', {required: false})
     };
 }
+
+export const DEFAULT_REGISTRY = 'registry=https://registry.npmjs.org';
+export const DEFAULT_NPMRC_FILE_NAME = '.npmrc';
