@@ -13,13 +13,14 @@ export function generateNpmConfig(inputs: context.Inputs) {
     for (const entry of inputs.registryList) {
         npmrcContent = npmrcContent + entry + '\n';
     }
-    for (const entry of inputs.authList) {
-        npmrcContent = npmrcContent + entry + '\n';
-    }
 
     if (npmrcContent == '') {
         core.info(`You did not enter any input, we will add the default npm registry.`);
         npmrcContent = context.DEFAULT_REGISTRY;
+    }
+
+    for (const entry of inputs.authList) {
+        npmrcContent = npmrcContent + entry + '\n';
     }
 
     const npmrcPath = getNpmrcPath();
