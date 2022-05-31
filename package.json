@@ -1,12 +1,12 @@
 {
   "name": "npm-cloudartifact-action",
   "version": "1.0.0",
-  "description": "Action for uploading or downloading artifact from HuaweiCloud npm CloudArtifact\"",
+  "description": "Action for uploading or downloading artifact from HuaweiCloud npm CloudArtifact",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
     "run": "node ./lib/main.js",
-    "package": "ncc build --source-map",
+    "package": "ncc build --source-map --license licenses.txt",
     "lint-create": "eslint --init",
     "lint": "eslint src",
     "format": "prettier --write **/*.ts",

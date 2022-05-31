@@ -14,7 +14,7 @@ export function generateNpmConfig(inputs: context.Inputs) {
         npmrcContent = npmrcContent + entry + '\n';
     }
 
-    if (npmrcContent == '') {
+    if (npmrcContent === '') {
         core.info(`You did not enter any input, we will add the default npm registry.`);
         npmrcContent = context.DEFAULT_REGISTRY;
     }
