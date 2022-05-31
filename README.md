@@ -1,5 +1,5 @@
 # npm CloudArtifact Action
-私有依赖库（[CloudArtifact](https://support.huaweicloud.com/cloudrelease/index.html)）用于管理私有组件（开发者通俗称之为私服），包括Maven、Npm、Go、PyPI、Rpm等多种仓库格式。  
+私有依赖库(CloudArtifact)是发布服务（[CloudRelease](https://support.huaweicloud.com/cloudrelease/index.html)）的语言软件仓库功能。用于管理私有组件（开发者通俗称之为私服），包括Maven、Npm、Go、PyPI、Rpm等多种仓库格式。 
 npm CloudArtifact Action会创建用户npm配置文件.npmrc文件(~/.npmrc),目前支持npm仓库源(registry_list)和仓库认证信息(auth_list)配置，用户后续的workflow步骤可以直接从CloudArtifact npm私有依赖库上传下载依赖组件。
 
 ## **前置工作**
