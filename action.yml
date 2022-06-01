@@ -1,0 +1,20 @@
+# action.yml
+name: 'HuaweiCloud npm CloudArtifact'
+description: 'Action for deploying/downloading npm packages to HuaweiCloud npm CloudArtifact'
+inputs:
+  registry_list:
+    description: npm镜像源列表,镜像列表将写入~/.npmrc。一个registry，可以多个@scope:registry。如果输入参数多个registry，npm将以最后一个为准。
+    required: false
+    default: |
+      registry=https://registry.npmjs.org/
+  auth_list:
+    description: npm二进制私仓账号信息配置。不带@scope上传格式【_auth=(user:password).base64 （用户名和密码中间用冒号隔开，通过base64编码后的字符串）】；带@scope上传【//npm-repo-url/:_auth=(username:password).base64（ 账号密码通过base64编码后的字符串）】
+    required: false
+  
+branding:
+  icon: 'cloud'
+  color: 'red'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+

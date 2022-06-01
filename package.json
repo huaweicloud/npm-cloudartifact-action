@@ -1,0 +1,44 @@
+{
+  "name": "npm-cloudartifact-action",
+  "version": "1.0.0",
+  "description": "Action for uploading or downloading artifact from HuaweiCloud npm CloudArtifact",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "run": "node ./lib/main.js",
+    "package": "ncc build --source-map --license licenses.txt",
+    "lint-create": "eslint --init",
+    "lint": "eslint src",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "test": "jest",
+    "all": "npm run lint && npm run format && npm run build && npm run package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huaweicloud/Maven-cloudartifact-action.git"
+  },
+  "keywords": [
+    "npm",
+    "cloudartifact"
+  ],
+  "author": "Chenyt26",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "@vercel/ncc": "^0.33.4",
+    "eslint": "^8.16.0",
+    "jest": "^28.1.0",
+    "prettier": "2.6.2",
+    "ts-jest": "^28.0.3",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2",
+    "uuid": "^8.3.2"
+  },
+  "dependencies": {
+    "@actions/core": "^1.8.2"
+  }
+}
