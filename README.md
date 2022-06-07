@@ -115,3 +115,4 @@ registry=https://mirrors.huaweicloud.com/repository/npm/
 //devrepo.devcloud.cn-north-4.huaweicloud.com/artgalaxy/api/npm/cn-north-4_xxxxx_npm_0/:_auth=*****
 //devrepo.devcloud.cn-north-4.huaweicloud.com/artgalaxy/api/npm/cn-north-4_xxxxx_npm_1/:_auth=*****
 ```
+详细的demo使用样例可以参考[npm-cloudartifact-workflow-samples](https://github.com/huaweicloud/npm-cloudartifact-workflow-samples)

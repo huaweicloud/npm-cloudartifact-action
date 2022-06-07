@@ -1,3 +1,4 @@
+import * as core from '@actions/core';
 import * as context from './context';
 
 /**
@@ -19,6 +20,7 @@ export function checkRegistryList(registryList: string[]): boolean {
         const registryReg = new RegExp(/^registry=.+/);
         const scopeRegistryReg = new RegExp(/^@.+:registry=.+/);
         if (!registryReg.test(registryList[i]) && !scopeRegistryReg.test(registryList[i])) {
+            core.info('registry_list is not correct.');
             return false;
         }
     }
@@ -35,10 +37,12 @@ export function checkAuthList(authList: string[]): boolean {
         const authReg = new RegExp(/^_auth=.+/);
         const scopeAuthReg = new RegExp(/^\/\/.+:_auth=.+/);
         if (!authReg.test(authList[i]) && !scopeAuthReg.test(authList[i])) {
+            core.info('auth_list is not correct.');
             return false;
         }
         const splitArray = authList[i].split('_auth=');
         if (!isBase64(splitArray[1])) {
+            core.info('auth_list is not base64.');
             return false;
         }
     }
