@@ -39,7 +39,7 @@ dGVzdDoxMjM= 是test:123base64编码
 ```
 //devrepo.devcloud.cn-north-4.huaweicloud.com/artgalaxy/api/npm/cn-north-4_xxx_npm_0/:_auth=dGVzdDoxMjM=
 ```
-<sup>Secrets variables can be configured on repository settings > Secrets</sup>
+<sup>用户名、密码等敏感信息，建议在GitHub项目的setting--Secret--Actions下添加私密参数。</sup>
 
 ## **使用样例**
 ### 1.默认不传参数样例
