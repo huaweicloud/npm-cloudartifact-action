@@ -45,7 +45,7 @@ dGVzdDoxMjM= 是test:123base64编码
 ### 1.默认不传参数样例
 ```yml
 steps:
-- uses: huaweicloud/npm-cloudartifact-action@v1.0.0
+- uses: huaweicloud/npm-cloudartifact-action@v1.1.0
 ```
 如果参数registry_list为空或者不填，.npmrc文件添加maven中心仓
 .npmrc输出结果
@@ -55,7 +55,7 @@ registry=https://registry.npmjs.org/
 ### 2.公开npm仓库使用样例
 ```yml
 steps:
-- uses: huaweicloud/npm-cloudartifact-action@v1.0.0
+- uses: huaweicloud/npm-cloudartifact-action@v1.1.0
   with: 
     registry_list: |
         registry=https://mirrors.huaweicloud.com/repository/npm/
@@ -67,7 +67,7 @@ registry=https://mirrors.huaweicloud.com/repository/npm/
 ### 3.不带@scope npm仓库使用样例
 ```yml
 steps:
-- uses: huaweicloud/npm-cloudartifact-action@v1.0.0
+- uses: huaweicloud/npm-cloudartifact-action@v1.1.0
   with: 
     registry_list: |
         registry=https://devrepo.devcloud.cn-north-4.huaweicloud.com/artgalaxy/api/npm/cn-north-4_xxxxx_npm_0/
@@ -82,7 +82,7 @@ _auth=*****
 ### 4.带@scope npm仓库使用样例
 ```yml
 steps:
-- uses: huaweicloud/npm-cloudartifact-action@v1.0.0
+- uses: huaweicloud/npm-cloudartifact-action@v1.1.0
   with: 
     registry_list: |
         @test:registry=https://devrepo.devcloud.cn-north-4.huaweicloud.com/artgalaxy/api/npm/cn-north-4_xxxxx_npm_0/
@@ -97,7 +97,7 @@ steps:
 ### 5.配置多仓库使用样例
 ```yml
 steps:
-- uses: huaweicloud/npm-cloudartifact-action@v1.0.0
+- uses: huaweicloud/npm-cloudartifact-action@v1.1.0
   with: 
     registry_list: |
       registry=https://mirrors.huaweicloud.com/repository/npm/
@@ -117,7 +117,5 @@ registry=https://mirrors.huaweicloud.com/repository/npm/
 ```
 详细的demo使用样例可以参考[npm-cloudartifact-workflow-samples](https://github.com/huaweicloud/npm-cloudartifact-workflow-samples)
 
-## 公网域名说明
-```
-npm官方镜像源：'https://registry.npmjs.org'
-```
+## Action中使用公网地址说明
+1. [npm官方镜像源](https://registry.npmjs.org)

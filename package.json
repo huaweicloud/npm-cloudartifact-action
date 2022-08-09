@@ -10,7 +10,7 @@
     "lint": "eslint src",
     "format": "prettier --write **/*.ts",
     "format-check": "prettier --check **/*.ts",
-    "test": "jest",
+    "test": "jest --collectCoverage",
     "all": "npm run test && npm run lint && npm run format && npm run build && npm run package"
   },
   "keywords": [
