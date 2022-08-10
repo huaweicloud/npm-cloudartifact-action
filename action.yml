@@ -1,6 +1,6 @@
 # action.yml
-name: 'HuaweiCloud npm CloudArtifact'
-description: 'Action for deploying/downloading npm packages to HuaweiCloud npm CloudArtifact'
+name: 'Huawei Cloud npm CloudArtifact'
+description: 'Action for deploying/downloading npm packages to Huawei Cloud npm CloudArtifact'
 inputs:
   registry_list:
     description: npm镜像源列表,镜像列表将写入~/.npmrc。一个registry，可以多个@scope:registry。如果输入参数多个registry，npm将以最后一个为准。

@@ -9,9 +9,9 @@ jobs:
       - uses: ./
         with: 
           registry_list: |
-            registry=https://mirrors.huaweicloud.com/repository/npm/
-            @test:registry=https://devrepo.devcloud.cn-north-7.ulanqab.huawei.com/artgalaxy/api/npm/xxxx/
+            registry=`<npm mirror url>`
+            @test:registry=`<npm private repo url>`
           auth_list: |
-            //devrepo.devcloud.cn-north-7.ulanqab.huawei.com/artgalaxy/api/npm/xxxx/:_auth=${{ secrets.NPM_AUTH }}
+            //`<npm private repo domain>`:_auth=${{ secrets.NPM_AUTH }}
       - run: |
           npm publish --verbose
